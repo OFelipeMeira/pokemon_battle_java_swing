@@ -1,6 +1,7 @@
 public class Pokemon {
 
     private String name;
+    
     private int hpTotal;
     private int hpCurrent;
     private int atack;
@@ -8,6 +9,7 @@ public class Pokemon {
     private int specialAtack;
     private int specialDefense;
     private int speed;
+
     private String type;
 
     public Pokemon(String pokemonName) {
