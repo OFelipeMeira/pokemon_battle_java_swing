@@ -7,7 +7,7 @@ public class Main {
 
         Species p1 = Species.BULBASAUR;
         System.out.println("=============================");
-        System.out.println( p1.getTypeModifier() );
+        System.out.println( p1.getTypeModifier(Type.WATER) );
         System.out.println("=============================");
 
 

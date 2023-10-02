@@ -86,11 +86,21 @@ public enum Species {
         return SPEED;
     }
 
-    public int getTypeModifier(){
-        int modifier;
-        modifier = this.TYPE_1.getTypeModifier(Type.GRASS);
+    // public Type getTYPE_1() {
+    //     return TYPE_1;
+    // }
+    // public Type getTYPE_2() {
+    //     return TYPE_2;
+    // }
 
-        return modifier;
+    public double getTypeModifier(Type t){
+        double modifier_1;
+        double modifier_2;
+
+        modifier_1 = this.TYPE_1.getTypeModifier( t );
+        modifier_2 = this.TYPE_2.getTypeModifier( t );
+
+        return modifier_1*modifier_2;
     }
 
 }
