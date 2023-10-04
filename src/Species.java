@@ -86,19 +86,12 @@ public enum Species {
         return SPEED;
     }
 
-    // public Type getTYPE_1() {
-    //     return TYPE_1;
-    // }
-    // public Type getTYPE_2() {
-    //     return TYPE_2;
-    // }
-
-    public double getTypeModifier(Type t){
+    public double getTypeModifierAgainst(Type t){
         double modifier_1;
         double modifier_2;
 
-        modifier_1 = this.TYPE_1.getTypeModifier( t );
-        modifier_2 = this.TYPE_2.getTypeModifier( t );
+        modifier_1 = this.TYPE_1.getTypeModifierAgainst( t );
+        modifier_2 = this.TYPE_2.getTypeModifierAgainst( t );
 
         return modifier_1*modifier_2;
     }

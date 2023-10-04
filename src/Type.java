@@ -11,7 +11,7 @@ public enum Type {
             new String[] { "Ghost" }),
 
     FLYING(
-            new String[] { "Fighting", "Grass" },
+            new String[] { "Fighting", "Grass","Bug" },
             new String[] { "Rock", "Steel", "Electric" },
             new String[] {}),
 
@@ -97,16 +97,16 @@ public enum Type {
         this.NO_EFFECT = noEffect;
     }
 
-    public double getTypeModifier(Type type) {
+    public double getTypeModifierAgainst(Type type) {
 
         if (contains(this.SUPER_EFFECTIVE, type)){
-            return 2.0;
-        }else if (contains(this.NOT_VERY_EFFECTIVE, type)){
             return 0.5;
+        }else if (contains(this.NOT_VERY_EFFECTIVE, type)){
+            return 2.0;
         }else if (contains(this.NO_EFFECT, type)){
-            return 0;
+            return 0.0;
         } else {
-            return 1;
+            return 1.0;
         }
 
     }
